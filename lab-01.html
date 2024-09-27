@@ -523,20 +523,28 @@ visitors in 2022?</em></p>
 <h3>Exercise f.</h3>
 <p><em>How many attractions had between 50,000 and 100,000 visitors in
 2022?</em></p>
-<pre class="r"><code>#visitors %&gt;% 
-#  ____(
-#    ______,
-#    ______ ) %&gt;%
-#  count()</code></pre>
+<pre class="r"><code>visitors %&gt;% 
+  filter(
+    n_2022&gt;50000,
+    n_2022&lt;100000 ) %&gt;%
+  count()</code></pre>
+<pre><code>## # A tibble: 1 × 1
+##       n
+##   &lt;int&gt;
+## 1    50</code></pre>
 </div>
 <div id="exercise-g." class="section level3">
 <h3>Exercise g.</h3>
 <p><em>How many regions have more than 50 tourist attraction in the data
 set? (Hint: You will need to tabulate the data before
 filtering.)</em></p>
-<pre class="r"><code>#visitors %&gt;% 
-#  _____(region) %&gt;%
-#  filter(______)</code></pre>
+<pre class="r"><code>visitors %&gt;% 
+  count(region) %&gt;%
+  filter(n&gt;50)</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##   region       n
+##   &lt;chr&gt;    &lt;int&gt;
+## 1 Scotland    97</code></pre>
 </div>
 </div>
 </div>
@@ -559,18 +567,24 @@ attractions?</em></p>
 <h3>Exercise h.</h3>
 <p><em>Perform the same calculation for the 2021 admissions
 data.</em></p>
-<pre class="r"><code>#visitors %&gt;% 
-#  ______(
-#    __________,
-#    __________
-#  )</code></pre>
+<pre class="r"><code>visitors %&gt;% 
+  summarise(
+    mean_2021 = mean(n_2021),
+    median_2021 = median(n_2021)
+  )</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##   mean_2021 median_2021
+##       &lt;dbl&gt;       &lt;dbl&gt;
+## 1        NA          NA</code></pre>
 <p>All values in the output are <code>NA</code>!</p>
 </div>
 <div id="exercise-i." class="section level3">
 <h3>Exercise i.</h3>
 <p><em>What does <code>NA</code> stand for and why are you getting this
 as your answer to the previous question.</em></p>
-<p><strong>Write your answer here</strong></p>
+<p><strong>NA Stands for not applicable We are getting this because
+there’s a problem with our data. We have undefined values??
+</strong></p>
 </div>
 <div id="exercise-j." class="section level3">
 <h3>Exercise j.</h3>
