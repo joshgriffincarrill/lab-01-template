@@ -105,9 +105,9 @@ visitors %>% filter(n_2022 == 565772)
 _How many attraction had more than 1 million visitors in 2022?_
 
 ```{r Ex_e}
-#visitors %>% 
-#  filter(____) %>%
-#  count()
+visitors %>% 
+  filter(n_2022 > 1000000) %>%
+  count(attraction)
 ```
 
 ## Question 5
