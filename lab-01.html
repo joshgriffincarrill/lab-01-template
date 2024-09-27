@@ -482,7 +482,11 @@ visitors %&gt;% count(admission, setting)</code></pre>
 <div id="exercise-d." class="section level3">
 <h3>Exercise d.</h3>
 <p><em>Which attraction had exactly 565,772 visitors in 2022?</em></p>
-<pre class="r"><code>#visitors %&gt;% filter(___ == ____)</code></pre>
+<pre class="r"><code>visitors %&gt;% filter(n_2022 == 565772)</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##   attraction                        n_2021 n_2022 admission setting region    
+##   &lt;chr&gt;                              &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;     
+## 1 Knowsley Safari and Knowsley Hall     NA 565772 Members   M       North West</code></pre>
 </div>
 <div id="exercise-e." class="section level3">
 <h3>Exercise e.</h3>
