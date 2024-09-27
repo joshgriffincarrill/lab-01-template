@@ -171,8 +171,8 @@ _Perform the same calculation for the 2021 admissions data._
 ```{r Ex_h}
 visitors %>% 
   summarise(
-    mean_2021 = mean(n_2021),
-    median_2021 = median(n_2021)
+    mean_2021 = mean(n_2021, na.rm = TRUE),
+    median_2021 = median(n_2021, na.rm = TRUE)
   )
 ```
 
@@ -191,7 +191,7 @@ _What does `NA` stand for and why are you getting this as your answer to the pre
 
 _Look at the help pages for the `mean()` and `median()` commands to see what the input argument `na.rm` does. Edit your code from exercise h so that it computes the summary statistics where data is available._
 
-**na.rm	- a logical evaluating to TRUE or FALSE indicating whether NA values should be stripped before the computation proceeds.**
+**na.rm	- a logical evaluating to TRUE or FALSE indicating whether NA values should be stripped before the computation proceeds. we need to do na.rm = true**
 
 
 
