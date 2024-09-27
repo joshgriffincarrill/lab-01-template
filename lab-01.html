@@ -381,7 +381,22 @@ visitors &lt;- read_csv(&quot;data/UK-visitor-numbers.csv&quot;)</code></pre>
 the data set by <code>region</code>.</em></p>
 <pre class="r"><code># Delete the comment &#39;#&#39; symbol at the start of the next line and complete the code. 
 
-#visitors %&gt;% count(_____)</code></pre>
+visitors %&gt;% count(region)</code></pre>
+<pre><code>## # A tibble: 12 × 2
+##    region                       n
+##    &lt;chr&gt;                    &lt;int&gt;
+##  1 East Midlands                9
+##  2 East of England             26
+##  3 London                      39
+##  4 North East                  25
+##  5 North West                  21
+##  6 Northern Ireland             9
+##  7 Scotland                    97
+##  8 South East                  34
+##  9 South West                  30
+## 10 Wales                        2
+## 11 West Midlands               35
+## 12 Yorkshire and the Humber    21</code></pre>
 </div>
 <div id="exercise-b." class="section level3">
 <h3>Exercise b.</h3>
@@ -389,7 +404,19 @@ the data set by <code>region</code>.</em></p>
 <code>setting</code>.</em></p>
 <pre class="r"><code># Delete the comment &#39;#&#39; symbol at the start of the next line and complete the code.
 
-#visitors %&gt;% count(_____, _____)</code></pre>
+visitors %&gt;% count(admission, setting)</code></pre>
+<pre><code>## # A tibble: 9 × 3
+##   admission setting     n
+##   &lt;chr&gt;     &lt;chr&gt;   &lt;int&gt;
+## 1 Charged   I          21
+## 2 Charged   M          12
+## 3 Charged   O           5
+## 4 Free      I          77
+## 5 Free      M           8
+## 6 Free      O          43
+## 7 Members   I          23
+## 8 Members   M         106
+## 9 Members   O          53</code></pre>
 </div>
 </div>
 <div id="question-2" class="section level2">
